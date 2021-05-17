@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   constructor(private loginService:LoginService,private router:Router) {
     
     this.loginService.setCustomerName("")
+    
    }
 
   ngOnInit(): void {
