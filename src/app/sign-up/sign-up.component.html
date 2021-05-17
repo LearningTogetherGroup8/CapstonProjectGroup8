@@ -1,0 +1,26 @@
+<div class="container">
+        <div class="frame">
+            <div class="nav">
+                <ul class="links">
+                   
+                    <li class="signup-active"><a class="btn">Sign up </a></li>
+                </ul>
+            </div>
+            <div >
+               
+                <form class="form-signup" action="" method="post" [formGroup]="signUpForm"> 
+                    <label for="fullname">Full name</label> 
+                    <input class="form-styling" type="text"  placeholder="" formControlName="firstName" /> 
+                    <label for="email">Email</label> 
+                    <input class="form-styling" type="text"  placeholder="" formControlName="emailId"/> 
+                    <label for="password">Password</label> 
+                    <input class="form-styling" type="text"  placeholder="" formControlName="password"/> 
+                    <label for="confirmpassword">Confirm password</label> 
+                    <input class="form-styling" type="text"  placeholder="" formControlName="confirmPassword"/> 
+                    <a class="btn-signup" (click)="submit()">Sign Up</a> 
+                </form>
+            </div>
+        </div>
+</div>
+               
+ 
