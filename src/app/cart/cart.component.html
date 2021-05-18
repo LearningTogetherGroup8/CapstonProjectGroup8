@@ -1,0 +1,74 @@
+<div class="main-content" style="background-color: rgba(75, 69, 69, 0.836);color: white;">
+    
+
+        <div class="section-content section-content-p30">
+            <div class = "container-fluid">
+    
+                <div *ngIf = " cartItems.length>0">
+                    <table class="table table-bordered" style="color: white; font-size: medium;">
+                    <tr>
+                        <th width="20%">Product Image</th>
+                        <th width="50%">Product Detail</th>
+                        <th width="30%"></th>
+                    </tr>
+    
+                    <tr *ngFor="let tempCartItem of cartItems">
+                        <td>
+                            <img src="{{'../../../../assets/images/allProducts/'+tempCartItem.imageUrl}}" class="img-responsive" width="150px"/>
+                        </td>
+                        <td>
+                             <p><strong> {{tempCartItem.productName}}</strong></p>
+                             <p><strong>Price: {{tempCartItem.price}}</strong></p>
+                        </td>
+                        <td>
+                            <div class="items">
+                                <label>Quantity:</label>
+    
+                                <div class="row no-gutters">
+                                    <div class = "col">
+                                        <button  class="btn btn-primary btn-sm">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col ml-4 mr-2">
+                                       
+                                    </div>
+                                    <div class = "col">
+                                        <button class="btn btn-primary btn-sm">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-8"></div>
+                                </div>
+                            </div>
+    
+                            <button  class="btn btn-primary btn-sm mt-2">Remove</button>
+                     
+                            <p class="mt-2">SubTotal: totalprice</p>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td colspan="2"></td>
+                        <td style="font-weight: bold">
+                          <p>Total Quantity: </p>
+                          <p>Free delivery</p>
+                          <p>Total Price : total price</p>
+                          <a routerLink="/checkout" class="btn btn-primary">Checkout</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
+                Your food cart is empty !!! ____ Keep ordering the healthy food___ :-)
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
